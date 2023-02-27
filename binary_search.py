@@ -1,20 +1,22 @@
 def binary_search(lst, item):
-    low = 0
-    high = len(lst) - 1
+    left = 0
+    right = len(lst) - 1
 
-    while low <= high:
-        mid = low + high
-        guess = lst[mid]
-        if guess == item:
-            return mid
-        if guess > item:
-            high = mid - 1
+    while left <= right:
+        center = (left + right) // 2
+        candidate = lst[center]
+        if item == candidate:
+            return center
+        elif item > candidate:
+            left = center + 1
+        elif item < candidate:
+            right = center - 1
         else:
-            low = mid + 1
-    return None
+            return None
 
 
-lst = [3, 5, 7, 8, 9, 11, 12, 23, 33, 45, 56, 89]
-item = 11
+lst = [1, 3, 4, 5, 8, 9, 11, 23, 34, 55, 66, 74, 80]
+item = 80
+
 
 print(binary_search(lst, item))
