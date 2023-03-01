@@ -49,4 +49,4 @@ def breadth_first_search(graph, start_element, desired):
     return False
 
 
-print(breadth_first_search(relationships, 'M', 'Georgiy'))
+print(breadth_first_search(relationships, 'Monica', 'Georgiy'))
