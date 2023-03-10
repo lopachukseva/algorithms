@@ -1,5 +1,5 @@
 def bubble_sort(lst):
-    iterations_count = len(lst) + 1
+    iterations_count = len(lst)
 
     for _ in range(1, iterations_count):
         for j in range(1, len(lst)):
